@@ -12,3 +12,11 @@ def books_view(request):
         "books": books
     }
     return render(request, template, context)
+
+def pagi(request):
+    page_number = request.GET.get("page")
+    paginator = Paginator()
+    context = {
+        'pagin': pagi
+    }
+    return render(request, 'pagi,html')
